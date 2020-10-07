@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.fhict.AnimalShelterController">
+   <children>
+      <SplitPane dividerPositions="0.3411371237458194" prefHeight="541.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="207.0">
+               <children>
+                  <Button fx:id="btnAddAnimal" layoutX="17.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#btnAddAnimal" prefHeight="25.0" prefWidth="173.0" text="Add animal" />
+                  <ChoiceBox onAction="#toggleSpecies" fx:id="choiceSpecies" layoutX="17.0" layoutY="35.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Label layoutX="17.0" layoutY="14.0" text="Species" />
+                  <Label layoutX="18.0" layoutY="75.0" text="Name" />
+                  <Label layoutX="20.0" layoutY="136.0" text="Gender" />
+                  <Label layoutX="17.0" layoutY="199.0" text="Bad habit" />
+                  <TextField fx:id="textNameAnimal" layoutX="17.0" layoutY="95.0" prefHeight="25.0" prefWidth="173.0" text="" />
+                  <TextField fx:id="textBadHabits" disable="true" layoutX="17.0" layoutY="225.0" prefHeight="25.0" prefWidth="173.0" />
+                   <fx:define> <ToggleGroup fx:id="genderGroup" /> </fx:define>
+                  <RadioButton fx:id="radioMale" layoutX="16.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="radioFemale" layoutX="91.0" layoutY="161.0" mnemonicParsing="false" text="Female" toggleGroup="$genderGroup" />
+                  <Separator layoutX="4.0" layoutY="302.0" prefWidth="200.0" />
+                  <Label  layoutX="15.0" layoutY="317.0" text="Product name" />
+                  <TextField fx:id="textNameProduct" layoutX="15.0" layoutY="341.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Label layoutX="14.0" layoutY="382.0" text="Price" />
+                  <TextField fx:id="textPriceProduct" layoutX="15.0" layoutY="407.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Button onMouseClicked="#btnAddProduct" layoutX="15.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Add product" />
+                  <Separator layoutX="-6.0" layoutY="493.0" prefHeight="3.0" prefWidth="210.0" />
+                  <Label layoutX="16.0" layoutY="508.0" prefHeight="21.0" prefWidth="100.0" text="Cash register:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelCash" layoutX="127.0" layoutY="507.0" text="0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="114.0" layoutY="507.0" text="€">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="396.0">
+               <children>
+                  <ListView fx:id="listAnimals" layoutX="13.0" layoutY="34.0" prefHeight="124.0" prefWidth="359.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Animals" />
+                  <Label layoutX="22.0" layoutY="183.0" prefWidth="93.0" text="Reserve animal" />
+                  <Label layoutX="23.0" layoutY="209.0" text="Name" />
+                  <TextField fx:id="textNameReservor" layoutX="65.0" layoutY="205.0" text="Type name here..." />
+                  <Button fx:id="btnReserveAnimal" layoutX="225.0" layoutY="203.0" mnemonicParsing="false" onMouseClicked="#btnAddReservor" prefHeight="25.0" prefWidth="149.0" text="Reserve animal" />
+                  <Button fx:id="btnSellAnimal" onMouseClicked="#btnSellAnimal" layoutX="337.0" layoutY="164.0" mnemonicParsing="false" text="Sell" />
+                  <Separator layoutY="302.0" prefHeight="3.0" prefWidth="391.0" />
+                  <ListView fx:id="listProducts" layoutX="15.0" layoutY="332.0" prefHeight="124.0" prefWidth="359.0" />
+                  <Label layoutX="16.0" layoutY="313.0" text="Products" />
+                  <Button onMouseClicked="#btnSellProduct" layoutX="339.0" layoutY="462.0" mnemonicParsing="false" text="Sell" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
