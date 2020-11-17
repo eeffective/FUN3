@@ -4,58 +4,49 @@
  */
 package calculate;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.*;
 
+import enums.EdgeSide;
 import fun3kochfractalfx.FUN3KochFractalFX;
 import timeutil.TimeStamp;
+
 
 /**
  * @author Nico Kuijpers
  * Modified for FUN3 by Gertjan Schouten
  */
+
 public class KochManager {
 
     private ArrayList<Edge> edges;
     private FUN3KochFractalFX application;
     private TimeStamp tsCalc;
     private TimeStamp tsDraw;
-    private Future<List<Edge>> futureLeft;
-    private Future<List<Edge>> futureBottom;
-    private Future<List<Edge>> futureRight;
+    private List<EdgeGenerator> edgeGenerators;
+    private List<Future<List<Edge>>> results;
+
 
     public KochManager(FUN3KochFractalFX application) {
-        this.edges = new ArrayList<Edge>();
+        this.edges = new ArrayList<>();
         this.application = application;
         this.tsCalc = new TimeStamp();
         this.tsDraw = new TimeStamp();
     }
 
-
     public void changeLevel(int nxt) {
-        // aanmaken van een pool voor de 3 threads
-        ExecutorService pool = Executors.newFixedThreadPool(3);
 
         edges.clear();
         tsCalc.init();
         tsCalc.setBegin("Begin calculating");
 
-        // aanroepen threads
-        EdgeGenerator left = new EdgeGenerator("left", nxt, this);
-        EdgeGenerator bottom = new EdgeGenerator("bottom", nxt, this);
-        EdgeGenerator right = new EdgeGenerator("right", nxt, this);
-
-        // vullen van de pool
-        futureLeft = pool.submit(left);
-        futureBottom = pool.submit(bottom);
-        futureRight = pool.submit(right);
-
-        pool.shutdown();
+        createEdgeGenerators(nxt);
+        bindProgressBars();
+        calculateEdges();
 
     }
 
-    public void drawEdges() {
+    public synchronized void drawEdges() {
         tsDraw.init();
         tsDraw.setBegin("Begin drawing");
         application.clearKochPanel();
@@ -66,41 +57,60 @@ public class KochManager {
         application.setTextDraw(tsDraw.toString());
     }
 
-    public void addEdge(Edge e) {
-        edges.add(e);
-    }
-
-    public void allDone() {
-        if (futureRight == null || futureBottom == null || futureLeft == null) return;
-        if (futureRight.isDone() && futureBottom.isDone() && futureLeft.isDone()) {
-            edges.clear();
-
-            try {
-                edges.addAll(futureLeft.get());
-                edges.addAll(futureBottom.get());
-                edges.addAll(futureRight.get());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
+    private void calculateEdges() {
+        ExecutorService pool = Executors.newFixedThreadPool(3);
+        results = new ArrayList<>();
+        try {
+            for (var eg : edgeGenerators) {
+                results.add(pool.submit((Callable<List<Edge>>) eg));
             }
-
-            tsCalc.setEnd("Stop calculating");
-            application.setTextNrEdges("" + this.edges.size());
-            application.setTextCalc(tsCalc.toString());
-            drawEdges();
-            clearFutures();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            pool.shutdown();
         }
     }
 
-    void clearFutures() {
-        futureRight = null;
-        futureBottom = null;
-        futureLeft = null;
+    private void createEdgeGenerators(int nxt) {
+        edgeGenerators = new ArrayList<>();
+        edgeGenerators.add(new EdgeGenerator(EdgeSide.LEFT, nxt, this));
+        edgeGenerators.add(new EdgeGenerator(EdgeSide.RIGHT, nxt, this));
+        edgeGenerators.add(new EdgeGenerator(EdgeSide.BOTTOM, nxt, this));
     }
 
-    public FUN3KochFractalFX getApplication() {
-        return this.application;
+
+    private void bindProgressBars() {
+        this.application.getProgressBarLeft().progressProperty().bind(edgeGenerators.get(0).progressProperty());
+        this.application.getProgressBarRight().progressProperty().bind(edgeGenerators.get(1).progressProperty());
+        this.application.getProgressBarBottom().progressProperty().bind(edgeGenerators.get(2).progressProperty());
+
+        this.application.getLblProgressBarLeft().textProperty().bind(edgeGenerators.get(0).messageProperty());
+        this.application.getLblProgressBarRight().textProperty().bind(edgeGenerators.get(1).messageProperty());
+        this.application.getLblProgressBarBottom().textProperty().bind(edgeGenerators.get(2).messageProperty());
     }
 
+
+    public void resultsReady() {
+
+        if (results.size() != 3) {
+            return;
+        }
+
+        if (results.stream().allMatch(f -> f.isDone())) {
+            edges.clear();
+            results.stream().forEach(f -> {
+                try {
+                    edges.addAll(f.get());
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            });
+
+            tsCalc.setEnd("End calculating");
+            application.setTextNrEdges("" + edges.size());
+            application.setTextCalc(tsCalc.toString());
+            application.requestDrawEdges();
+            results.clear();
+        }
+    }
 }
