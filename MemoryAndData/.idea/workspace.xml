@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d4a7561-5ee7-4525-a992-b479fb3f2c12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Opdracht2/OnOffBit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FloatBrainBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Opdracht1/FloatBrainBreaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutOfMemoryError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Opdracht1/OutOfMemoryError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StackOverflowError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Opdracht1/StackOverflowError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FloatBrainBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FloatBrainBreaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Opdracht1/FloatBrainBreaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Opdracht1/OutOfMemoryError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Opdracht1/StackOverflowError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Opdracht2/OnOffBit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OnOffBit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OutOfMemoryError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutOfMemoryError.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -36,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KochFractal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.OnOffBit">
     <configuration name="FloatBrainBreaker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -47,11 +47,11 @@
       </method>
     </configuration>
     <configuration name="OnOffBit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Opdracht2.OnOffBit" />
+      <option name="MAIN_CLASS_NAME" value="OnOffBit" />
       <module name="MemoryAndData" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Opdracht2.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -60,15 +60,26 @@
       </method>
     </configuration>
     <configuration name="OutOfMemoryError" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Opdracht1.OutOfMemoryError" />
+      <option name="MAIN_CLASS_NAME" value="OutOfMemoryError" />
       <module name="MemoryAndData" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="StackOverflowError" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Opdracht1.StackOverflowError" />
+      <option name="MAIN_CLASS_NAME" value="StackOverflowError" />
       <module name="MemoryAndData" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -82,6 +93,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -95,13 +107,18 @@
       <workItem from="1602523073618" duration="2920000" />
       <workItem from="1602529697035" duration="1981000" />
       <workItem from="1602662851938" duration="12000" />
+      <workItem from="1605623458960" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2313" y="0" key="CommitChangelistDialog2" timestamp="1605623750440">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2313" y="0" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1605623750440" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602662860418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
