@@ -1,0 +1,5 @@
+Gemiddelde 'Calculating' voor Level 8, 9 en 10.
+
+Level 8 = 5ms
+Level 9 = 23,3ms
+Level 10 = 113,3ms
