@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d4a7561-5ee7-4525-a992-b479fb3f2c12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FloatBrainBreaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FloatBrainBreaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opdracht1/FloatBrainBreaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opdracht1/OutOfMemoryError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opdracht1/StackOverflowError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Opdracht2/OnOffBit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OnOffBit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutOfMemoryError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutOfMemoryError.java" afterDir="false" />
-    </list>
+    <list default="true" id="2d4a7561-5ee7-4525-a992-b479fb3f2c12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +99,7 @@
       <workItem from="1602523073618" duration="2920000" />
       <workItem from="1602529697035" duration="1981000" />
       <workItem from="1602662851938" duration="12000" />
-      <workItem from="1605623458960" duration="291000" />
+      <workItem from="1605623458960" duration="930000" />
     </task>
     <servers />
   </component>

@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fb98ed-90a8-4d94-820b-a87d8823ca93" name="Default Changelist" comment="" />
+    <list default="true" id="82fb98ed-90a8-4d94-820b-a87d8823ca93" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/FUN3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/src/PoC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryAndData/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryAndData/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,19 +35,28 @@
     </option>
   </component>
   <component name="ProjectId" id="1jQ2se27UuhY0ILRUQlDB7ycBAU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/KochFractal" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Algorithm" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.PoC">
     <configuration name="FUN3KochFractalFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fun3kochfractalfx.FUN3KochFractalFX" />
       <module name="FUN3_KochFractal" />
@@ -43,6 +66,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PoC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PoC" />
+      <module name="Algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProofOfConcept" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProofOfConcept" />
+      <module name="ShuffleAlgorithm" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,6 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PoC" />
+        <item itemvalue="Application.ProofOfConcept" />
         <item itemvalue="Application.FUN3KochFractalFX" />
       </list>
     </recent_temporary>
@@ -78,13 +117,22 @@
       <workItem from="1604480740921" duration="4286000" />
       <workItem from="1604754996773" duration="195000" />
       <workItem from="1604756805432" duration="49000" />
+      <workItem from="1605703089065" duration="829000" />
+      <workItem from="1605703945645" duration="497000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1605704348703">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1605704348703" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1604493280736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -93,10 +141,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="408" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603726357516" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1604756853299">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1605704413608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1604756853299" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1605704413608" />
     <state x="2512" y="207" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1603807266838" />
     <state width="1877" height="127" key="GridCell.Tab.0.bottom" timestamp="1604501012582">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -146,10 +194,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="448" y="118" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603724663549" />
-    <state x="2361" y="66" key="new project wizard" timestamp="1603807188522">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state x="551" y="181" key="new project wizard" timestamp="1605704444728">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="551" y="181" key="new project wizard/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1603737765691" />
+    <state x="551" y="181" key="new project wizard/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1605704444728" />
     <state x="2361" y="66" key="new project wizard/0.0.1920.1040/1920.0.1536.824@1920.0.1536.824" timestamp="1603807188522" />
     <state x="2345" y="187" key="run.anything.popup" timestamp="1603806112508">
       <screen x="1920" y="0" width="1536" height="824" />
